@@ -1,0 +1,30 @@
+{
+    "width":1600,
+    "height": 662,
+    "bounding_boxes": [
+        {
+            "class": "h1",
+            "xywh" : [0.1, 0.2, 0.1, 0.1],
+            "data" : "Heading 1",
+            "color": "#FF0000"
+        },
+        {
+            "class": "h2",
+            "xywh" : [0.15, 0.2, 0.1, 0.1],
+            "data" : "Heading 2",
+            "color": "#00FF00"
+        },
+        {
+            "class": "h3",
+            "xywh" : [0.2, 0.2, 0.1, 0.1],
+            "data" : "Heading 3",
+            "color": "#0000FF"
+        },
+        {
+            "class": "p",
+            "xywh" : [0.25, 0.2, 0.1, 0.1],
+            "data" : "Paragraph",
+            "color": "#FF00FF"
+        }
+    ]
+}
