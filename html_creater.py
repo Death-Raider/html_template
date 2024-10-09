@@ -1,10 +1,27 @@
 import json
-
+from jsonDataValidator import JSONValidator
 def load_data(json_path: str)->dict:
+    template = {
+        "height": int,
+        "width" : int,
+        "bounding_boxes" : list
+    }
     data = {}
-    with open("data.json","r") as f:
-        data = json.loads(f.read()) 
-    return data
+    try:
+        with open(json_path, "r") as f:
+            data = json.loads(f.read())
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        raise ValueError(f"Error loading JSON: {e}")
+    
+    validator = JSONValidator(template,data)
+    try:
+        validator.is_valid()
+        print("data is valid and parsed successfully")
+        return data
+    except (KeyError, TypeError) as e:
+        print(f"Error loading data: {e}")
+        print(f"Expected Format: {template}")
+        return None
 
 def create_element_html(data:dict, granularity:int|list[int])->str: 
     website_height = f"{int(data['height'])}px"
