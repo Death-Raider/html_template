@@ -1,27 +1,25 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Define the property of the wrapper div for the data elements -->   
-    <style>
-        #website_part {
-            width: 1600px;
-            height: 662px;
-            display: grid;
-            background-color: #ff96f8AA;
-            grid-template-columns: repeat(100, 1fr);
-            grid-template-rows: repeat(100, 1fr);
-        }
-    </style>
-</head>
-<body>
-    <div id="website_part">
-
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Define the property of the wrapper div for the data elements -->   
+    </head>
+    <body>
+    
+    <div id="website_part" style="
+        width: 1600px;
+        height: 662px;
+        display: grid;
+        background-color: #ff96f8AA;
+        grid-template-columns: repeat(100, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    ">
+    
         <h1 style="
             grid-column: 11 / span 10;
-            grid-row: 21 / span 10;
+            grid-row: 3 / span 1;
             background-color: #FF0000;
             overflow: hidden;
             height: 100%;
@@ -31,10 +29,10 @@
         ">
             Heading 1
         </h1>
-    
+        
         <h2 style="
             grid-column: 16 / span 10;
-            grid-row: 21 / span 10;
+            grid-row: 3 / span 1;
             background-color: #00FF00;
             overflow: hidden;
             height: 100%;
@@ -44,10 +42,10 @@
         ">
             Heading 2
         </h2>
-    
+        
         <h3 style="
             grid-column: 21 / span 10;
-            grid-row: 21 / span 10;
+            grid-row: 3 / span 1;
             background-color: #0000FF;
             overflow: hidden;
             height: 100%;
@@ -57,10 +55,10 @@
         ">
             Heading 3
         </h3>
-    
+        
         <p style="
             grid-column: 26 / span 10;
-            grid-row: 21 / span 10;
+            grid-row: 3 / span 1;
             background-color: #FF00FF;
             overflow: hidden;
             height: 100%;
@@ -70,7 +68,7 @@
         ">
             Paragraph
         </p>
+        </div>
+    </body>
+    </html>
     
-    </div>
-</body>
-</html>
