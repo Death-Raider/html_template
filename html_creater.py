@@ -55,18 +55,19 @@ def create_element_html(data:dict, granularity:int|list[int])->str:
         col_width = int(points[2] * GRID_X)  # Width in Grid
         row_height = int(points[3] * GRID_Y)  # Height in Grid
 
+        # background-color: {box['color']};
         wrapper_div += f"""
         <{box['class']} style="
             grid-column: {col_start} / span {col_width};
             grid-row: {row_start} / span {row_height};
-            background-color: {box['color']};
             overflow: hidden;
             height: 100%;
             width: 100%;
+            border: solid;
             margin: 0 auto;
             padding: 0;
         ">
-            {box['data']}
+            {box['class']}
         </{box['class']}>
         """
     wrapper_div += "</div>"
@@ -76,7 +77,7 @@ def create_element_html(data:dict, granularity:int|list[int])->str:
 def main():
 
     data = load_data("data.json")
-    wrapper_div = create_element_html(data,(100,50))
+    wrapper_div = create_element_html(data,(1000,1000))
 
     html_content = f"""
     <!DOCTYPE html>
